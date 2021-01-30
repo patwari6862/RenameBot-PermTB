@@ -138,7 +138,7 @@ async def rename_video(bot, message):
             c_time = time.time()
             await bot.send_video(
                 chat_id=message.chat.id,
-                document=new_file_name,
+                video=new_file_name,
                 thumb=thumb_image_path,
                 caption=description,
                 # reply_markup=reply_markup,
