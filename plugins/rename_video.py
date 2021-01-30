@@ -74,3 +74,8 @@ async def rename_video(bot, message):
         message_ids=message.reply_to_message.message_id,
         revoke=True
     )
+
+    if message.from_user.id not in Config.BANNED_USERS:
+        file_name = message.text
+        description = script.CUSTOM_CAPTION_UL_FILE.format(newname=file_name)
+        download_location = Config.DOWNLOAD_LOCATION + "/"
