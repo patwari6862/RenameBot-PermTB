@@ -11,10 +11,12 @@ async def cb_handler(bot, update):
         await update.message.delete()
         await force_name(bot, update.message)
         
+    if "rename_button2" in update.data:
+        await update.message.delete()
+        await force_name(bot, update.message)
+        
     elif "cancel_e" in update.data:
         await update.message.delete()
         await cancel_extract(bot, update.message)
         
-        if "rename_button2" in update.data:
-            await update.message.delete()
-            await force_name(bot, update.message)
+        
