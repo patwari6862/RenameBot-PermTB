@@ -1,6 +1,6 @@
 import pyrogram
 
-from plugins.help_text import rename_cb, cancel_extract
+from plugins.help_text import rename_cb, vus_name , cancel_extract
 from plugins.rename_file import force_name
 from plugins.rename_video import force_name
 
