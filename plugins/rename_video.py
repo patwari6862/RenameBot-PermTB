@@ -61,7 +61,7 @@ async def rename_video(bot, message):
         await message.reply_text('Why did you delete that 😕', True)
         return
         
-    filetype = media.document or media.video or media.audio or media.voice or media.video_note
+    filetype = media.document or media.video
     try:
         actualname = filetype.file_name
         splitit = actualname.split(".")
