@@ -7,11 +7,7 @@ from plugins.rename_video import force_name
 @pyrogram.Client.on_callback_query()
 async def cb_handler(bot, update):
         
-    if "rename_button" in update.data:
-        await update.message.delete()
-        await force_name(bot, update.message)
-        
-    if "rename_buttonn" in update.data:
+    if "rename_button" or "rename_buttonn"  in update.data:
         await update.message.delete()
         await force_name(bot, update.message)
         
