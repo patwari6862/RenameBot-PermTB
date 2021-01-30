@@ -16,7 +16,5 @@ async def cb_handler(bot, update):
         await cancel_extract(bot, update.message)
         
         if "rename_video" in update.data:
-
-        await update.message.delete()
-
-        await force_name(bot, update.message)
+            await update.message.delete()
+            await force_name(bot, update.message)
