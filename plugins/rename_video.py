@@ -39,7 +39,7 @@ async def force_name(bot, message):
 
 
 @Client.on_message(filters.private & filters.reply & filters.text)
-async def cus_name(bot, message):
+async def vus_name(bot, message):
     
     if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
         asyncio.create_task(rename_video(bot, message))     
